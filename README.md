@@ -24,20 +24,20 @@ ResumeAnalyser is a Streamlit-based web app that analyzes resumes against job de
 
 Clone this repo:  
 
-```bash
+
 git clone https://github.com/your-username/ResumeAnalyser.git
 cd ResumeAnalyser
 Create a virtual environment (recommended):
 
-bash
-Copy code
+
+
 python -m venv venv
 source venv/bin/activate    # On Mac/Linux
 venv\Scripts\activate       # On Windows
 Install dependencies:
 
-bash
-Copy code
+
+
 pip install -r requirements.txt
 📦 Dependencies
 Main libraries used:
@@ -59,8 +59,7 @@ numpy → Numerical operations
 ▶️ Usage
 Run the app with:
 
-bash
-Copy code
+
 streamlit run app.py
 Then open your browser at:
 👉 http://localhost:8501
@@ -76,25 +75,26 @@ Compares overlap of skills/keywords.
 
 Calculates match percentage:
 
-mathematica
+
 Copy code
 ATS Score = (Number of Matched Keywords ÷ Total Job Keywords) × 100
 Displays score, missing skills, and recommendations.
 
 📂 Project Structure
-bash
-Copy code
+
 ResumeAnalyser/
 │── app.py                # Main Streamlit app
 │── requirements.txt      # Dependencies
 │── README.md             # Project documentation
 │── assets/               # (Optional) icons, images, CSS
 📸 Screenshots
+
 Job Matches
-(Example UI screenshot here)
+<img width="1745" height="631" alt="image" src="https://github.com/user-attachments/assets/14a6e580-fcc3-4b88-ab47-e5bec422ab2b" />
 
 Recommended YouTube Courses
-(Example UI screenshot here)
+<img width="862" height="382" alt="image" src="https://github.com/user-attachments/assets/accc7d07-e680-4685-8430-9a9f4235c73b" />
+
 
 🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
@@ -102,12 +102,11 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 📜 License
 This project is licensed under the MIT License.
 
-yaml
-Copy code
+
 
 ---
 
-Do you want me to also **generate a ready `requirements.txt`** file for you (with exact packages and versions), so your project can run anywhere?
+
 
 
 
@@ -116,3 +115,4 @@ Do you want me to also **generate a ready `requirements.txt`** file for you (wit
 
 
 Ask ChatGPT
+
