@@ -2,6 +2,16 @@
 import io
 import re
 import streamlit as st
+# Hide the "Deploy" button and other Streamlit menu items
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}   /* hides the hamburger menu */
+    header {visibility: hidden;}      /* hides the Streamlit header */
+    footer {visibility: hidden;}      /* hides the footer */
+    [data-testid="stToolbar"] {visibility: hidden;}  /* hides the deploy button */
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 import plotly.graph_objects as go
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -778,3 +788,4 @@ if uploaded_file is not None:
 
         if not shown:
             st.info("No specific YouTube courses found for your skills. Try adding more technical keywords.")
+
