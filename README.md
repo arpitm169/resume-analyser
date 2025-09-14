@@ -11,7 +11,10 @@ ResumeAnalyser is a Streamlit-based web app that analyzes resumes against job de
 - 📊 ATS Score Calculation:
   - Matches resume keywords with job description.  
   - Calculates percentage match.  
-  - Highlights missing skills.  
+  - Highlights missing skills.
+  - <img width="1747" height="680" alt="image" src="https://github.com/user-attachments/assets/338da361-7bbd-47f7-8635-05514b985543" />
+  
+
 - 💡 Improved Recommendations:
   - Lists additional skills/courses to strengthen your profile.  
 - 🎥 YouTube Course Recommendations:
@@ -115,4 +118,5 @@ This project is licensed under the MIT License.
 
 
 Ask ChatGPT
+
 
