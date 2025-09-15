@@ -528,25 +528,31 @@ st.markdown("""
     <div class="section-title">
         📋 Job Description Analysis
     </div>
-    <p style="color: #64748b; margin-bottom: 1rem;">Paste the job description below to get personalized ATS scoring and tailored recommendations.</p>
+    <p style="color: #6674F0; margin-bottom: 1rem;">Paste the job description below to get personalized ATS scoring and tailored recommendations.</p>
 </div>
 """, unsafe_allow_html=True)
 
 jd_text = st.text_area("", height=150, placeholder="Paste job description here for enhanced analysis...")
 
 # Upload Section
+
+# Resume Upload Section
 st.markdown("""
 <div class="section-card">
     <div class="section-title">
         📄 Resume Upload
     </div>
-    <div class="upload-area">
-        <div style="font-size: 3rem; margin-bottom: 1rem;">📤</div>
-        <div style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Upload Your Resume</div>
-        <div style="color: #64748b;">Supports PDF format • Best results with text-based PDFs</div>
-    </div>
+    <p style="color: #6674F0; margin-bottom: 1rem;">
+        Upload Your Resume below to get Your Analysis
+    </p>
+    <p style="color: #6674F0; font-size: 0.9rem; font-weight: 500;">
+        Supports <b>PDF format</b> • Best results with text-based PDFs
+    </p>
 </div>
 """, unsafe_allow_html=True)
+
+
+
 
 uploaded_file = st.file_uploader("", type=["pdf"], label_visibility="collapsed")
 
@@ -659,16 +665,31 @@ if uploaded_file is not None:
                 }
             }
         ))
-        fig.update_layout(height=300, font={'color': '#2d3748'})
+        fig.update_layout(
+    height=300,
+    font={'color': '#2d3748'},
+    paper_bgcolor="white",   # background outside the gauge
+    plot_bgcolor="white"     # background behind the gauge
+)
         st.plotly_chart(fig, use_container_width=True)
 
     with col3:
         if ats_score >= 80:
-            st.success("🎉 Excellent Score!")
+            st.markdown(
+            "<div style='background:#d1fae5; color:#065f46; font-weight:600; padding:10px; border-radius:8px;'>🎉 Excellent Score!</div>",
+            unsafe_allow_html=True
+        )
         elif ats_score >= 60:
-            st.info("👍 Good Score")
+         st.markdown(
+            "<div style='background:#dbeafe; color:#1e3a8a; font-weight:600; padding:10px; border-radius:8px;'>👍 Good Score</div>",
+            unsafe_allow_html=True
+        )
         else:
-            st.error("⚠ Needs Improvement")
+            st.markdown(
+            "<div style='background:#fee2e2; color:#991b1b; font-weight:600; padding:10px; border-radius:8px;'>⚠ Needs Improvement</div>",
+            unsafe_allow_html=True
+        )
+
 
     # Skills WordCloud
     st.markdown("""
@@ -787,5 +808,4 @@ if uploaded_file is not None:
                 shown = True
 
         if not shown:
-            st.info("No specific YouTube courses found for your skills. Try adding more technical keywords.")
-
+            st.info("No specific YouTube courses found for your skills. Try adding more technical keywords.")
